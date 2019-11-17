@@ -1,8 +1,5 @@
 import AppBar from '@material-ui/core/AppBar'
 import Button from '@material-ui/core/Button'
-import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
 import IconButton from '@material-ui/core/IconButton'
 import LockIcon from '@material-ui/icons/Lock'
 import React, { useEffect } from 'react'
@@ -18,11 +15,15 @@ const styles = theme => {console.log(theme); return (
     {
   main: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+     backgroundColor: "black",
+    height: "1vh"
   },
   root: {
     flexGrow: 1,
-    flex: '1 0 100%'
+    flex: '1 0 100%',
+    backgroundColor: "black",
+    height: "1vh"
     // height: '100%',
     // overflow: 'hidden'
   },
@@ -93,27 +94,8 @@ const styles = theme => {console.log(theme); return (
     marginBottom: theme.spacing(1)
   },
   markdownElement: {},
-  cardsContent: {
-    padding: 15,
-    display: 'flex',
-    justifyContent: 'space-around',
-    flexWrap: 'wrap',
-    [theme.breakpoints.only('xs')]: {
-      width: '100%',
-      padding: 0,
-      paddingTop: 15
-    }
-  },
-  card: {
-    minWidth: 275,
-    maxWidth: 350,
-    margin: 15,
-    [theme.breakpoints.only('xs')]: {
-      width: '100%',
-      margin: 0,
-      marginTop: 7
-    }
-  },
+ 
+  
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
@@ -146,6 +128,20 @@ const LandingPage = ({ classes, history, theme }) => {
       history.push('/signin')
     }
   })
+  const StyledButton = withStyles({
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    borderRadius: 3,
+    border: 0,
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  },
+  label: {
+    textTransform: 'capitalize',
+  },
+})(Button);
 
   return (
     <div className={classes.main}>
@@ -155,9 +151,9 @@ const LandingPage = ({ classes, history, theme }) => {
         <meta name="msapplication-navbutton-color" content={theme.palette.primary.main} />
         <title>Revolution 1x1</title>
       </Helmet>
-      <AppBar position="static">
+      <AppBar style={{ backgroundColor: "black", flex: 1 }} position="static" >
         <Toolbar disableGutters>
-          <div style={{ flex: 1 }} />
+          <div style={{ backgroundColor: "black", flex: 1 }} />
 
           <Tooltip id="tooltip-icon1" title="Sign in">
             <IconButton
@@ -194,96 +190,22 @@ const LandingPage = ({ classes, history, theme }) => {
               <Typography variant="h5" component="h2" color="inherit" gutterBottom className={classes.h5}>
                 {'Join the Revolution'}
               </Typography>
-              <Button
+              <StyledButton
                 onClick={() => {
                   history.push('/signin')
                 }}
                 className={classes.button}
                 variant="outlined"
                 color="primary"
+                classes={{
+
+                 }}
               >
                 {'Join Here'}
-              </Button>
+              </StyledButton>
             </div>
 
-            <div className={classes.cardsContent}>
-              <Card className={classes.card}>
-                <CardContent>
-                  <Typography variant="h5" component="h2">
-                    Installation
-                  </Typography>
-                  <br />
-                  <Typography>{'Just run this script to start:'}</Typography>
-                  <br />
-                  <Typography className={classes.pos} color="textSecondary">
-                    {' '}
-                    npx create-react-app test-app --scripts-version rmw-react-scripts{' '}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size="small"
-                    onClick={() => {
-                      var win = window.open('https://github.com/TarikHuber/rmw-shell', '_blank')
-                      win.focus()
-                    }}
-                  >
-                    Learn More
-                  </Button>
-                </CardActions>
-              </Card>
-              <Card className={classes.card}>
-                <CardContent>
-                  <Typography variant="h5" component="h2">
-                    Usage
-                  </Typography>
-                  <br />
-                  <Typography>{'Set your configuration to the App component:'}</Typography>
-                  <br />
-                  <Typography className={classes.pos} color="textSecondary">
-                    {'import App from \'rmw-shell\''}
-                    <br />
-                    {'<App appConfig={{ configureStore, ...config }} />'}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size="small"
-                    onClick={() => {
-                      var win = window.open('https://github.com/TarikHuber/react-most-wanted', '_blank')
-                      win.focus()
-                    }}
-                  >
-                    Learn More
-                  </Button>
-                </CardActions>
-              </Card>
-              <Card className={classes.card}>
-                <CardContent>
-                  <Typography variant="h5" component="h2">
-                    What is this?
-                  </Typography>
-                  <Typography noWrap={false} color="textSecondary">
-                    {`This is a OPEN SOURCE demo application that demonstartes the usage of the rmw-shell library 
-                    with react, Material-UI and firebase.  `}
-                    <br />
-                    {` This demo has no purpose to do something as an app. 
-                    It is here just to show how everthing works together. `}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size="small"
-                    onClick={() => {
-                      history.push('/signin')
-                    }}
-                  >
-                    Get started
-                  </Button>
-                </CardActions>
-              </Card>
-            </div>
-          </div>
+  </div>
         </div>
       </div>
     </div>
