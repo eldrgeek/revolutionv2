@@ -9,7 +9,7 @@ import React, { useEffect } from 'react'
 import Toolbar from '@material-ui/core/Toolbar'
 import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
-import { GitHubIcon } from 'rmw-shell/lib/components/Icons'
+// import { GitHubIcon } from 'rmw-shell/lib/components/Icons'
 import { Helmet } from 'react-helmet'
 import { withRouter } from 'react-router-dom'
 import { withStyles } from '@material-ui/core/styles'
@@ -33,8 +33,10 @@ const styles = theme => {console.log(theme); return (
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.palette.background.paper,
-    color: theme.palette.type === 'light' ? theme.palette.primary.dark : theme.palette.primary.main
+    // backgroundColor: theme.palette.background.paper,
+    backgroundColor: "black",
+    color: "white"
+    // color: theme.palette.type === 'light' ? theme.palette.primary.dark : theme.palette.primary.main
   },
   text: {
     display: 'flex',
@@ -151,7 +153,7 @@ const LandingPage = ({ classes, history, theme }) => {
         <meta name="theme-color" content={theme.palette.primary.main} />
         <meta name="apple-mobile-web-app-status-bar-style" content={theme.palette.primary.main} />
         <meta name="msapplication-navbutton-color" content={theme.palette.primary.main} />
-        <title>REACT VERY MOST WANTED</title>
+        <title>Revolution 1x1</title>
       </Helmet>
       <AppBar position="static">
         <Toolbar disableGutters>
@@ -160,7 +162,7 @@ const LandingPage = ({ classes, history, theme }) => {
           <Tooltip id="tooltip-icon1" title="Sign in">
             <IconButton
               name="signin"
-              aria-label="Open Github"
+              aria-label="Sign in"
               color="inherit"
               onClick={() => {
                 history.push('/signin')
@@ -170,18 +172,7 @@ const LandingPage = ({ classes, history, theme }) => {
               <LockIcon />
             </IconButton>
           </Tooltip>
-          <Tooltip id="tooltip-icon2" title="GitHub repository">
-            <IconButton
-              name="github"
-              aria-label="Open Github"
-              color="inherit"
-              href="https://github.com/TarikHuber/react-most-wanted"
-              target="_blank"
-              rel="noopener"
-            >
-              <GitHubIcon />
-            </IconButton>
-          </Tooltip>
+          
         </Toolbar>
       </AppBar>
 
@@ -198,10 +189,10 @@ const LandingPage = ({ classes, history, theme }) => {
                 gutterBottom
                 className={classes.title}
               >
-                {'REACT REALLY REALLY WANTED'}
+                {'REVOLUTION 1x'}
               </Typography>
               <Typography variant="h5" component="h2" color="inherit" gutterBottom className={classes.h5}>
-                {'React Starter-Kit with all Most Wanted features.'}
+                {'Join the Revolution'}
               </Typography>
               <Button
                 onClick={() => {
@@ -211,7 +202,7 @@ const LandingPage = ({ classes, history, theme }) => {
                 variant="outlined"
                 color="primary"
               >
-                {'Get Started'}
+                {'Join Here'}
               </Button>
             </div>
 
