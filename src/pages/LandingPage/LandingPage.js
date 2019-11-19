@@ -175,7 +175,16 @@ const LandingPage = ({ classes, history, theme }) => {
       <div className={classes.root}>
         <div className={classes.hero}>
           <div className={classes.content}>
-            <img src="/rmw.svg" alt="Material-UI Logo" className={classes.logo} />
+              <div style={{ display: "flex", height:"50vh", justifyContent: "center"}}>
+    <div style={{width: "100%"}}>
+                  <img src="fullinforev1x1centered.jpg"
+                   className="loader" alt="" 
+                   style={{height: "80px" }} />
+                   </div>
+                   </div>
+            {/* <img src="/rmw.svg" alt="Material-UI Logo" className={classes.logo} /> */}
+            
+        
             <div className={classes.text}>
               <Typography
                 variant="h3"
@@ -185,11 +194,14 @@ const LandingPage = ({ classes, history, theme }) => {
                 gutterBottom
                 className={classes.title}
               >
-                {'REVOLUTION 1x'}
+
+                {'REVOLUTION 1x1'}
               </Typography>
               <Typography variant="h5" component="h2" color="inherit" gutterBottom className={classes.h5}>
                 {'Join the Revolution'}
               </Typography>
+                
+
               <StyledButton
                 onClick={() => {
                   history.push('/signin')
