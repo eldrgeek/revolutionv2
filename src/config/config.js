@@ -16,24 +16,28 @@ const LPAsync = Loadable({
 
 const config = {
   firebase_config: {
-    apiKey: 'AIzaSyBQAmNJ2DbRyw8PqdmNWlePYtMP0hUcjpY',
-    authDomain: 'react-most-wanted-3b1b2.firebaseapp.com',
-    databaseURL: 'https://react-most-wanted-3b1b2.firebaseio.com',
-    projectId: 'react-most-wanted-3b1b2',
-    storageBucket: 'react-most-wanted-3b1b2.appspot.com',
-    messagingSenderId: '258373383650',
-    appId: '1:258373383650:web:b49ad5dd28da999a'
+   apiKey: "AIzaSyC9O-Cnnm5sBDGlcfGPc0oWQjA2-pMOrwg",
+  authDomain: "revolution-1x1.firebaseapp.com",
+  databaseURL: "https://revolution-1x1.firebaseio.com",
+  projectId: "revolution-1x1",
+  storageBucket: "revolution-1x1.appspot.com",
+  messagingSenderId: "779744556471",
+  appId: "1:779744556471:web:28e6cd98d83fc44aabe432",
+  measurementId: "G-X2X53JN2LF"
   },
   firebase_config_dev: {
-    apiKey: 'AIzaSyB31cMH9nJnERC1WCWA7lQHnY08voLs-Z0',
-    authDomain: 'react-most-wanted-dev.firebaseapp.com',
-    databaseURL: 'https://react-most-wanted-dev.firebaseio.com',
-    projectId: 'react-most-wanted-dev',
-    storageBucket: 'react-most-wanted-dev.appspot.com',
-    messagingSenderId: '70650394824',
-    appId: '1:70650394824:web:7cd3113c37741efc'
+    apiKey: "AIzaSyA_oU-_G6ThUQY7ki9KDra794oksaDPfC8",
+    authDomain: "revolution1x1dev.firebaseapp.com",
+    databaseURL: "https://revolution1x1dev.firebaseio.com",
+    projectId: "revolution1x1dev",
+    storageBucket: "revolution1x1dev.appspot.com",
+    messagingSenderId: "500287466116",
+    appId: "1:500287466116:web:d9e6d336436de6c86430d1",
+    measurementId: "G-D2QZ6R9DN1"
   },
-  firebase_providers: ['google.com', 'facebook.com', 'twitter.com', 'github.com', 'password', 'phone'],
+  firebase_providers: ['google.com',
+   'facebook.com', 
+    'password', 'phone'],
   initial_state: {
     themeSource: {
       isNightModeOn: true,
