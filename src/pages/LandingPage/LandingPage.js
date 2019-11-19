@@ -176,10 +176,10 @@ const LandingPage = ({ classes, history, theme }) => {
         <div className={classes.hero}>
           <div className={classes.content}>
               <div style={{ display: "flex", height:"50vh", justifyContent: "center"}}>
-    <div style={{width: "100%"}}>
-                  <img src="fullinforev1x1centered.jpg"
+    <div >
+                  <img src="RevolutionTransparent.png"
                    className="loader" alt="" 
-                   style={{height: "80px" }} />
+                   style={{height: "40vh" }} />
                    </div>
                    </div>
             {/* <img src="/rmw.svg" alt="Material-UI Logo" className={classes.logo} /> */}
