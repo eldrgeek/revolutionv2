@@ -23,7 +23,10 @@ const styles = theme => {console.log(theme); return (
     flexGrow: 1,
     flex: '1 0 100%',
     backgroundColor: "black",
-    height: "1vh"
+    height: "1vh",
+     fontFamily: "stencil-std, sans-serif",
+      fontStyle: "normal",
+      fontWeight: 400,
     // height: '100%',
     // overflow: 'hidden'
   },
@@ -46,6 +49,9 @@ const styles = theme => {console.log(theme); return (
     justifyContent: 'center'
   },
   title: {
+       fontFamily: "stencil-std, sans-serif",
+      fontStyle: "normal",
+      fontWeight: 400,
     letterSpacing: '.7rem',
     textIndent: '.7rem',
     fontWeight: theme.typography.fontWeightLight,
@@ -57,6 +63,9 @@ const styles = theme => {console.log(theme); return (
     whiteSpace: 'nowrap'
   },
   h5: {
+    fontFamily: "stencil-std, sans-serif",
+      fontStyle: "normal",
+      fontWeight: 400,
     paddingLeft: theme.spacing(1) * 4,
     paddingRight: theme.spacing(1) * 4,
     marginTop: theme.spacing(1),
@@ -192,7 +201,7 @@ const LandingPage = ({ classes, history, theme }) => {
                 component="h1"
                 color="inherit"
                 gutterBottom
-                className={classes.title}
+                className={ classes.title}
               >
 
                 {'REVOLUTION 1x1'}
